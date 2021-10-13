@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <title>Url shortner microservice</title>
+</head>
+<body>
+    <div id="container">
+        <div id="microsrvc">
+            <div id="example">
+                <h3>Example usage</h3>
+              <p class="text">Your url:</p>
+              <p id="org"><a href=" https://www.amazon.com/dp/B09DMM99MP/ref=syn_sd_onsite_desktop_238?psc=1&pd_rd_plhdr=t&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFWOUZOV1hZOVBUR0wmZW5jcnlwdGVkSWQ9QTA4ODI1MzkyRzhCWERHWk5OSjhOJmVuY3J5cHRlZEFkSWQ9QTA5NTYyMzUzUExaTk5KNUxIS0pIJndpZGdldE5hbWU9c2Rfb25zaXRlX2Rlc2t0b3AmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl">https://www.amazon.com/dp/B09DMM99MP/ref=syn_sd_onsite_desktop<br>_238?psc=1&pd_rd_plhdr=t&spLa=ZW5jcnlwdGVkUXVhbGlma<br>WVyPUFWOUZOV1hZOVBUR0wmZW5jcnlwd<br>GVkSWQ9QTA4ODI1MzkyRzhCWERHWk5OSjhO<br>JmVuY3J5cHRlZEFkSWQ9QTA5NTYyMzUzUExaTk5KNUxIS0pIJndpZ<br>GdldE5hbWU9c2Rfb25zaX<br>RlX2Rlc2t0b3AmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2<br>dDbGljaz10cnVl</a></p>
+                <p class="text">Shortned url output:</p>
+              <p id="response"><a href="http://localhost:5000/tMQWO">http://localhost:5000/tMQWO</a></p>
+            </div>
+            <form action="/api" method="POST" enctype="application/x-www-form-urlencoded">
+            <input type="text" name="orginalUrl" placeholder="enter your url">
+            <button type="submit">Create</button>
+            
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

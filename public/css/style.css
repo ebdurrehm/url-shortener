@@ -1,0 +1,37 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 500px ;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#org{
+  width: 500px;
+  margin-top: 20px;
+  background-color: yellow;
+  padding: 20px;
+}
+.text{
+  text-align: center;
+  margin-bottom: 10px;
+}
+#response{
+  width: 500px;
+  margin-top: 20px;
+  background-color: chartreuse;
+  padding: 20px;
+}
+
+h3{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  border: 1px solid green;
+  padding: 10px;
+}
