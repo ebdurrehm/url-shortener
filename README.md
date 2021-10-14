@@ -36,7 +36,6 @@ npm start
 
 👤 **Abdurrahim Ahmadov**
 
-* Website: abduldev.ml
 * Twitter: [@ebdurrehm](https://twitter.com/ebdurrehm)
 * Github: [@ebdurrehm](https://github.com/ebdurrehm)
 * LinkedIn: [@abdurrahim-ahmadov](https://linkedin.com/in/abdurrahim-ahmadov)
