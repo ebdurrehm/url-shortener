@@ -18,7 +18,7 @@
 
 ### 🏠 [Homepage](https://github.com/ebdurrehm/url-shortener#readme)
 
-[h](u-shortner.herokuapp.com/)
+<a href="u-shortner.herokuapp.com/"> Demo</a>
 
 ## Install
 
