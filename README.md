@@ -23,13 +23,7 @@
 ## Install
 
 ```sh
-git clone
-```
-
-## Usage
-
-```sh
-First your can clone this project to your local machine and in the terminal can run &#34;npm start&#34; command to start debugging. 
+git clone https://github.com/ebdurrehm/url-shortener.git
 ```
 
 ## Run tests
