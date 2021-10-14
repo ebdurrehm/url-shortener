@@ -47,16 +47,19 @@ app.post('/api/', (req,res)=>{
     
 });
 
+//configure user request that contain shortened url
 app.get('/:url',async (req,res)=>{
-    const url =req.params.url;
-    const findUrl= myUrl+url;
-    const data = await Db.findOne({shortedUrl:findUrl});
-    const orgUrl = data.orginalUrl;
+    const url =req.params.url; // grab url code
+    const findUrl= myUrl+url; //create shoret url again
+    const data = await Db.findOne({shortedUrl:findUrl}); //get data which contain user shortened url
+    const orgUrl = data.orginalUrl; // get orginal url 
     console.log(data);
     console.log(orgUrl);
-    res.redirect(orgUrl);
+    res.redirect(orgUrl); // redirect user to orginal url
     
 })
+
+//server configuration
 var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 var server_host = process.env.YOUR_HOST || '0.0.0.0';
 app.listen(server_port, server_host, function() {
