@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 var {nanoid} = require('nanoid');
 dotenv.config({path:"secret.env"});
 var bodyParser = require('body-parser');
+
+//define middlware to send response as json
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,8 +20,6 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
     if(err) console.log(err);
     console.log("you are connected to db");
 });
-//define middlware to send response as json
-
 
 
 app.get('/', (req,res)=>{
