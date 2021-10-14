@@ -35,8 +35,14 @@ app.post('/api/', (req,res)=>{
     
     // send all data to database
     Db.create ({orginalUrl,myUrl, shortedUrl}, (err,data)=>{
-        if(err) res.json("your url alredy exsist!");//check if url alredy exsist in database throw an error
-        res.status(200).json(data.shortedUrl ); // else send to user created url
+        try {
+            res.send("<h1 style='text-align:center; margin-bottom:20px; color:chocolate; font-size:50;'> Your shortened url &#128071;</h1> "+ "<p style='text-align:center'><a style='background-color: cornsilk; padding: 10px; ' href="+data.shortedUrl+">"+"&#128279;"+data.shortedUrl+"</a></p>"); // else send to user created url
+          }
+          catch (exception_var) {
+            if (err) res.send("<p style='background-color: red; padding: 40px; color: white; font-size: 20px; text-align: center;'>your url alredy exsists!</p>");
+          }
+          
+        
     });
     
 });
