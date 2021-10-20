@@ -1,7 +1,7 @@
 {
   "name": "url-shortner",
   "version": "1.0.0",
-  "description": "Url shortner microservice",
+  "description": "Url shortener microservice",
   "main": "server.js",
   "scripts": {
     "start": "node app.js",
