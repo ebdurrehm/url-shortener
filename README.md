@@ -42,7 +42,7 @@ npm start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ebdurrehm/url-shortener/issues). 
+Contributions, issues and feature requests are welcome!<br/>Feel free to check [issues page](https://github.com/ebdurrehm/url-shortener/issues). 
 
 ## Show your support
 
