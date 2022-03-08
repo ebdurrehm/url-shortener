@@ -30,9 +30,17 @@ app.post('/api/', (req,res)=>{
  
     //get user entered url
     const orginalUrl = req.body.orginalUrl;
+     const regex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
    
     const shortedUrl = myUrl+nanoid(5); //create random unique 5 digits code (nanoid is for this purpose) and add to your base url, your shourted url are ready
     
+     if(regex.test(orginalUrl)){
+    const parsedUrl = new URL(orginalUrl);
+   const hostname = parsedUrl.hostname;
+    //check if the dns adresses of the hostname are valid
+    dns.lookup(hostname,(err, family, adress)=> {
+      if(err){ res.json({"error":"Invalid Hostname"})}
+      else{
     // send all data to database
     Db.create ({orginalUrl,myUrl, shortedUrl}, (err,data)=>{
         try {
@@ -42,8 +50,14 @@ app.post('/api/', (req,res)=>{
             if (err) res.send("<p style='background-color: red; padding: 40px; color: white; font-size: 20px; text-align: center;'>your url alredy exsists!</p>");
           }
           
-        
-    });
+   }) }
+      
+    })
+    
+  }
+  else{
+    res.json({"error":"Invalid URL"});
+  }
     
 });
 
